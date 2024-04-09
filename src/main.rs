@@ -66,6 +66,8 @@ fn handle_keyboard_events(
 
             end.x += 1.0;
 
+            info!("add tween: {:?} -> {:?}", start, end);
+
             commands.entity(entity).insert((
                 SpanTweenerBundle::new(Duration::from_millis(500)).tween_here(),
                 EaseFunction::BackIn,
